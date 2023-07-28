@@ -15,9 +15,9 @@ export default {
           '100%': { transform: 'rotate(0.0deg)' },
         },
         flying: {
-          '0%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(0.8rem)' },
-          '100%': { transform: 'translateY(0)' },
+          '0%': { transform: 'translateY(25rem)', opacity: 0.3 },
+          '50%': { transform: 'translateY(0rem)', opacity: 1 },
+          '100%': { transform: 'translateY(-25rem)', opacity: 0 },
         },
         badge: {
           '100%': {
@@ -28,7 +28,7 @@ export default {
       },
       animation: {
         'waving-hand': 'wave 2s linear infinite',
-        'flying-card': 'flying 3s infinite normal',
+        'flying-card': 'flying 5s linear infinite',
         'badge-pulse': 'badge 1.5s ease-out infinite',
       },
     },
