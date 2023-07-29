@@ -1,11 +1,28 @@
 import { motion } from 'framer-motion';
-import { IconCodeCircle } from '@tabler/icons-react';
+import {
+  IconCodeCircle,
+  IconBrandReact,
+  IconBrandNextjs,
+  IconBrandVue,
+  IconBrandNuxt,
+  IconBrandSvelte,
+  IconBrandTailwind,
+} from '@tabler/icons-react';
 import { SectionMotion } from '../common/motion/Section';
 import { SectionHeader } from '../components/SectionHeader';
+import { SkillCard } from '../components/SkillCard';
 
 export const Skills = () => {
   const { section } = SectionMotion;
   const sectionDescription = 'List of my skills';
+  const skills = [
+    { label: 'React Js', icon: <IconBrandReact /> },
+    { label: 'Next Js', icon: <IconBrandNextjs /> },
+    { label: 'Vue Js', icon: <IconBrandVue /> },
+    { label: 'Nuxt Js', icon: <IconBrandNuxt /> },
+    { label: 'Svelte Js', icon: <IconBrandSvelte /> },
+    { label: 'Tailwind CSS', icon: <IconBrandTailwind /> },
+  ];
   return (
     <motion.section
       initial={section.initial}
@@ -18,6 +35,11 @@ export const Skills = () => {
         label="Skills"
         description={sectionDescription}
       />
+      <div className="grid grid-cols-6 gap-4">
+        {skills.map((skill) => (
+          <SkillCard key={skill.label} icon={skill.icon} label={skill.label} />
+        ))}
+      </div>
     </motion.section>
   );
 };
