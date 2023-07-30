@@ -1,24 +1,30 @@
-import {
-  FaGithubAlt,
-  FaLinkedinIn,
-  FaInstagram,
-  FaMailBulk,
-  FaWhatsapp,
-} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { MediaBarMotion } from '../common/motion/MediaBar';
+import {
+  IconBrandCampaignmonitor,
+  IconBrandGithub,
+  IconBrandInstagram,
+  IconBrandLinkedin,
+  IconBrandWhatsapp,
+} from '@tabler/icons-react';
 
 export const MediaBar = () => {
   const media = [
-    { icon: <FaGithubAlt />, link: 'https://github.com/Bayusetiawan45' },
+    { icon: <IconBrandGithub />, link: 'https://github.com/Bayusetiawan45' },
     {
-      icon: <FaLinkedinIn />,
+      icon: <IconBrandLinkedin />,
       link: 'https://www.linkedin.com/in/bayu-setiawan99/',
     },
-    { icon: <FaInstagram />, link: 'https://www.instagram.com/bayustr__/' },
-    { icon: <FaWhatsapp />, link: 'https://wa.me/+62887676546' },
-    { icon: <FaMailBulk />, link: 'mailto:bayusetiawanipb@gmail.com' },
+    {
+      icon: <IconBrandInstagram />,
+      link: 'https://www.instagram.com/bayustr__/',
+    },
+    { icon: <IconBrandWhatsapp />, link: 'https://wa.me/+62887676546' },
+    {
+      icon: <IconBrandCampaignmonitor />,
+      link: 'mailto:bayusetiawanipb@gmail.com',
+    },
   ];
   const { container } = MediaBarMotion;
   return (
