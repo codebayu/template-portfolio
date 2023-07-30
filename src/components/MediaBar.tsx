@@ -2,8 +2,8 @@ import {
   FaGithubAlt,
   FaLinkedinIn,
   FaInstagram,
-  FaTwitter,
   FaMailBulk,
+  FaWhatsapp,
 } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -17,7 +17,7 @@ export const MediaBar = () => {
       link: 'https://www.linkedin.com/in/bayu-setiawan99/',
     },
     { icon: <FaInstagram />, link: 'https://www.instagram.com/bayustr__/' },
-    { icon: <FaTwitter />, link: 'https://github.com/Bayusetiawan45' },
+    { icon: <FaWhatsapp />, link: 'https://wa.me/+62887676546' },
     { icon: <FaMailBulk />, link: 'mailto:bayusetiawanipb@gmail.com' },
   ];
   const { container } = MediaBarMotion;
@@ -26,7 +26,7 @@ export const MediaBar = () => {
       initial={container.initial}
       animate={container.animated}
       transition={container.transition}
-      className="flex absolute flex-col w-10 p-2 bg-teal-500 items-center rounded-md bottom-0 md:bottom-auto md:top-80 space-y-4"
+      className="hidden md:flex absolute z-10 flex-col w-10 p-2 bg-teal-500 items-center rounded-md bottom-0 md:bottom-auto md:top-80 space-y-4"
     >
       {media.map((item) => (
         <Link

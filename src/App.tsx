@@ -14,7 +14,7 @@ function App() {
     <main className="w-screen py-4 bg-gray-950 text-gray-50 min-h-screen">
       <Header />
       <MediaBar />
-      <section className="md:px-20">
+      <section className="px-3 md:px-20">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

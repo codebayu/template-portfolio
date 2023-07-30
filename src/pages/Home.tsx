@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { LeaveCard } from '../components/LeaveCard';
 import { HomeMotion } from '../common/motion/Home';
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
   const { description, resume, wrapImg, image } = HomeMotion;
@@ -27,14 +28,16 @@ export const Home = () => {
           neque illo. Vel repudiandae culpa dolorum, accusantium odit rerum
           commodi totam?
         </p>
-        <motion.button
-          initial={resume.initial}
-          animate={resume.animated}
-          transition={resume.transition}
-          className="rounded-3xl w-max border border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-black hover:border-teal-500"
-        >
-          Download Resume
-        </motion.button>
+        <Link to="./Bayu-Setiawan-Frontend-Developer-CV.pdf" target="_blank">
+          <motion.div
+            initial={resume.initial}
+            animate={resume.animated}
+            transition={resume.transition}
+            className="rounded-3xl w-max border px-4 py-2 border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-black hover:border-teal-500"
+          >
+            Download Resume
+          </motion.div>
+        </Link>
       </motion.div>
       <motion.div
         initial={wrapImg.initial}
