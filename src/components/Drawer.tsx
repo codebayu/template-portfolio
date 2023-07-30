@@ -22,9 +22,14 @@ export const Drawer = ({ onClick, links }: DrawerProps) => {
       }}
       className="bg-black p-4 fixed top-0 left-0 right-0 border-b border-teal-500 rounded-b-xl"
     >
-      <div className="flex justify-between font-bold text-lg mb-4 border-b border-white py-2 w-full">
-        <span>Bayu Setiawan</span>
-        <IconX onClick={onClick} />
+      <div
+        onClick={onClick}
+        className="flex justify-between font-bold text-lg mb-4 border-b border-white py-2 w-full"
+      >
+        <Link to="/" className="text-white hover:text-teal-500">
+          Bayu Setiawan
+        </Link>
+        <IconX />
       </div>
       <div className="flex flex-col space-y-2 text-center">
         {links.map((link) => (
